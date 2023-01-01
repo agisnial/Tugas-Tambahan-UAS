@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+One&display=swap');
+:root{
+    --Hitam:#1E1E1E;
+    --Abu1:#222325;
+    --Kuning: #FFD600;
+    --Putih:#fff;
+    --Abu2: #535456;
+   
+}
+.box-atas{
+    text-align: center;
+    font-style: normal;
+    font-family: 'Inter';
+    color: var(--Putih);
+    font-weight: 700;
+    font-size:90px;
+    height:91.5%;/*91vh;*/
+    letter-spacing: normal;
+}
+
+.box-bawah{
+    margin: 0;
+    height: 5vh;
+    width: 100%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+.box-atas,.box-bawah{
+    grid-template-columns: repeat(2,1fr);
+    display: grid;
+}
+
+.box-kanan,.box-kiri{
+	grid-template-columns: repeat(2,1fr);
+	display: grid;
+}
+
+.box-kanan{
+    background-color: var(--Hitam);
+}
+
+.box-kiri{
+    background-color: var(--Abu1);
+}
+
+.poin-kanan{
+    top: 33%;
+    left:68%;
+    position: fixed;
+}
+
+.poin-kiri{
+    top: 33%;
+    left:15%;
+    position: fixed;
+}
+
+.box-bawah>.pengguna1>.identitas{
+	grid-template-columns: 7% 93%;
+    display: grid;
+}    
+
+.box-bawah>.pengguna2>.identitas{
+    grid-template-columns: 93% 7%;
+    display: grid;    
+}
+
+.pengguna1>.identitas>.ciri{
+    padding: 5px;
+    color: var(--Hitam);
+    background-color: var(--Kuning);
+    text-align: center;
+}
+
+.pengguna1>.identitas>.nama{
+    padding: 5px;
+    text-align: left;
+    color: var(--Putih);
+    background-color:var(--Abu1);
+}
+
+.pengguna2>.identitas>.nama{
+    padding: 5px;
+    background-color: var(--Kuning);
+    text-align: center;
+}
+
+.pengguna2>.identitas>.ciri{
+    padding: 5px;
+    color: var(--Putih);
+    text-align: right;
+    background-color: var(--Abu2);
+}
+
+@media(max-width:800px){
+    .box-atas{
+        height: 93.5%;
+        font-size: 50px;       
+    }
+
+    .box-bawah{
+    	font-size: 10px;
+    }
+
+    .poin-kanan{
+        left:70%;
+        top: 40%;
+    }
+    .poin-kiri{
+        left:16%;
+        top: 40%;
+    }
+    .box-bawah>.pengguna1>.identitas{
+        grid-template-columns: 16% 90%;
+        display: grid;
+    }
+    .box-bawah>.pengguna2>.identitas{
+        grid-template-columns: 84% 16%;
+        display: grid;
+    }
+}
